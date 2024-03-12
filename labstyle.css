@@ -2,34 +2,88 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
      padding: 3;
-    background-color: rgb(238, 240, 243);
+    background-color: rgb(255, 255, 255);
 }
 
 /* Navbar Styles */
 header {
-    background-color: #e8eeec;
-    color: #20c37a;
+    background-color: #ffffff;
+    color: #0a064e;
     padding: 1rem;
     
 }
+
+
+/* Styles for the navigation bar */
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border-style: none; */
-    text-decoration: none;
+    padding: 1rem;
+}
 
+.logo-container {
+    display: flex;
+    align-items: center;
 }
-.nav-links .dropdown{
-    text-decoration: none;
-    
+
+.logo-img {
+    width: 90px; /* Adjust the width as needed */
+    height: 90px; /* Adjust the height as needed */
+    margin-right: 10px;
 }
+
+.logo {
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid rgb(229, 232, 232);
+}
+
+.search-form button {
+    padding: 10px;
+    background: #fafbfb;
+    color: #0a064e;
+    font-size: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+    font-style: italic;
+}
+
+.nav-buttons {
+    display: flex;
+}
+
+.nav-buttons button {
+    padding: 10px;
+    margin-left: 10px;
+    background: #0a064e;;
+    color: #fff;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Add any other styles as needed */
+
+
+
 li{
     text-decoration: none;
 }
 .logo {
-    font-size: 3rem;
+    font-size: 4rem;
     font-style: italic;
     font-weight: bold
 }
@@ -72,7 +126,7 @@ form.example::after {
     display: table;
 }
 .anchor{
-    color: #20c37a;
+    color: #0a064e;
 }
 .hospital-img{
     width: 100%;
@@ -110,58 +164,10 @@ form.example::after {
     padding: 2rem;
     text-align: center;
     color: rgb(27, 164, 34);
+
 }
 
-/* dropdown
 
-
-/* Basic styling for the dropdown */
-.dropdown {
-    position: sticky;
-    display : flex;
-    float: right;
-}
-
-/* Styling for the button */
-.dropdown button {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    position:relative;
-    align-items: center;
-    float: right;
-}
-
-/* Styling for the dropdown options */
-.dropdown-options {
-    display: none;
-    position: absolute;
-    background-color: #171435;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    z-index: 1;
-    color: #e2e9e6;
-}
-
-/* Styling for the dropdown options links */
-.dropdown-options a {
-    display: grid;
-    padding: 10px;
-    text-decoration: none;
-    color: #ded9d9;
-}
-
-/* Highlight on hover for dropdown options links */
-.dropdown-options a:hover {
-    background-color: #170707;
-}
-
-/* Display the dropdown options when hovering over the dropdown */
-.dropdown:hover .dropdown-options {
-    display: block;
-}
 
 
 .box {
@@ -188,11 +194,27 @@ form.example::after {
     border-radius: 50%;
 }
 
-h2 {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #0a0a0a;
+.boxheader {
+    /* Add styles for the h2 element with class "boxheader" */
+    font-size: 24px; /* Example font size */
+    color: #333; /* Example text color */
+    /* Add any other styles as needed */
 }
+
+.boxheader a {
+    /* Add styles for the anchor (a) element inside h2 with class "boxheader" */
+    text-decoration: none; /* Remove underline from the link */
+    color: #0c0c0c; /* Example link color */
+    /* Add any other styles for the link as needed */
+}
+
+.boxheader a:hover {
+    /* Add styles for the anchor (a) element on hover */
+    text-decoration: underline; /* Example underline on hover */
+    /* Add any other hover styles for the link as needed */
+}
+
+
 
 /* recomendation bar */
 .recommendation-bar {
@@ -208,7 +230,7 @@ h2 {
     text-align: center;
     text-decoration: none;
     background-color: #fff;
-    color: #4CAF50;
+    color: #0a064e;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s;
@@ -359,3 +381,89 @@ h2 {
 .contact-form-container .btn:hover {
     background-color: #e74c3c;
 }
+
+/* Style for the login modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#service {
+    overflow: hidden; /* Ensure the text is initially hidden */
+    white-space: nowrap; /* Prevent line breaks */
+    font-family: cursive; /* Use a monospaced font for a typewriter effect */
+    animation: typing 4s steps(40, end), blink-caret 0.5s step-end infinite;
+    font-weight: bold;
+    #service {
+        overflow: hidden; /* Ensure the text is initially hidden */
+        white-space: nowrap; /* Prevent line breaks */
+        font-family: monospace; /* Use a monospaced font for a typewriter effect */
+        animation: typing 4s steps(40, end), blink-caret 0.5s step-end infinite;
+        font-weight: bold;
+        border-right: 2px solid; /* Add border for the blinking cursor effect */
+      }
+      
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+      
+      @keyframes blink-caret {
+        from,
+        to {
+          border-right-color: transparent;
+        }
+        50% {
+          border-right-color: #000;
+        }
+      }
+      
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from,
+    to {
+      border-right-color: transparent;
+    }
+    50% {
+      border-right-color: #000;
+    }
+  }
+  
