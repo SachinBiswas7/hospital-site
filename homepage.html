@@ -10,57 +10,86 @@
 
 <body>
 
-    <header>
-        <nav>
-            <div class="logo">HealthHub</div>
-            <div class="dropdown">
-                <button>MENU</button>
-                <div class="dropdown-options">
-                  <a href="#">ABOUT US</a>
-                  <a href="#">SERVICES</a>
-                  <a href="#">CONTRACT</a>
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <!-- Your existing meta tags and title -->
+        <!-- ... -->
+    
+        <!-- Include the CSS file for navigation bar styles -->
+        <link rel="stylesheet" href="navbar.css">
+    </head>
+    
+    <body>
+
+        
+        <header>
+            <nav>
+                <div class="logo-container">
+                    <img src="healthhublogo.png.jpg" alt="HealthHub Logo" class="logo-img">
+                    <div class="logo">HealthHub</div>
                 </div>
-              </div>
-        </nav>
-    </header>
+                <!-- Add the search bar in the middle -->
+                <div class="search-form">
+                    <input type="text" placeholder="...." name="search">
+                    <button type="submit">Search</button>
+                </div>
+                <!-- Add the login, about us, services, and contract buttons on the right -->
+                <div class="nav-buttons">
+                    <button onclick="window.location.href='./login.html'">Login</button>
+                    <button onclick="window.location.href='aboutus.html'">About Us</button>
+                    <button onclick="window.location.href='#service'">Services</button>
+                    <button onclick="window.location.href='#contract'">Contact</button>
+                </div>
+            </nav>
+        </header>
+    
+        
+    
+    </body>
+    
+    </html>
+    
 
     <main>
         <section class="hospital-description">
         
             <img class="hospital-img" src="./5.png" alt="">
-        <p >Discover a holistic approach to wellness, personalized care, and a supportive community at HealthHub – because your health deserves the very best."
+        <div id="service" >Discover a holistic approach to wellness, personalized care, and a supportive community at HealthHub – because your health deserves the very best."
 
-        </p>
+        </div>
             <!-- Add more content here -->
         </section>
     </main>
 
 
     <div class="box">
-        <div class="box1">
+        <div class="box1" >
             <img src="1.png" class="box1-img" alt="Emergency Services">
-            <h2 class="boxheader">Find a doctor</h2>
+            <h2 class="boxheader"><a href="finddoctor.html">Find a Doctor</a></h2>
+            
             
         </div>
         <div class="box1">
             <img src="22.png" class="box1-img" alt="Send a inquary">
-            <h2 class="boxheader">Send an enquiry</h2>
+            <h2 class="boxheader"><a href="inquary.html">Send an enquiry</a></h2>
+
             
         </div>
         <div class="box1">
             <img src="33.png" class="box1-img" alt="Book a appointment">
-            <h2 class="boxheader">Book an appointment</h2>
-            
+            <h2 class="boxheader"><a href="doctorbooking.html">Book a Doctor</a></h2>
         </div>
         <div class="box1">
-            <img src="8.png" class="box1-img" alt="Book ICU/CCU">
-            <h2 class="boxheader"> Book ICU/CCU</h2></h>
+            <img src="8.png" class="box1-img" alt="icubooking">
+            <h2 class="boxheader"><a href="icubooking.html">Book ICU/CCU</a></h2>
         </div>
     </div>
 
 
     <div class="recommendation-bar">
-        <p>Check out our recommended packages for personalized care and exclusive benefits! <a href="#" class="btn">Explore Packages</a></p>
+        <p>Check out our recommended packages for personalized care and exclusive benefits! <a href="package.html" class="btn">Explore Packages</a></p>
     </div>
     
 
@@ -101,23 +130,21 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-section about">
-                    <h2>About Us</h2>
-                    <p>Thank you for choosing Health Hub for your healthcare needs. Your well-being is our priority. If you have any questions or need assistance, please don't hesitate to contact us. We look forward to providing you with exceptional care."  </p>
-                </div>
+                
+                
                 <div class="footer-section links">
                     <h2>Quick Links</h2>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./aboutus.html">About</a></li>
+                        <li><a href="#service">Services</a></li>
+                        <li><a href="#contract">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-section contact-form">
-                    <h2>Contact Us</h2>
+                    <h2 >Contact Us</h2>
                     <form action="#" class="contact-form-container">
-                        <input type="email" name="email" class="text-input contact-input"
+                        <input id="contract" type="email" name="email" class="text-input contact-input"
                             placeholder="Your email address">
                         <textarea name="message" class="text-input contact-input" placeholder="Your message"></textarea>
                         <button type="submit" class="btn btn-big">Send</button>
