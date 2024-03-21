@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div class="back-button">
+        <a href="index.html"> Back To Home</a>
+    </div>
+    <div class="login-container">
+        <h1>Sign Up</h1>
+        <form id="signup-form" action="connect.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit" name="send">Sign Up</button>
+        </form>
+        <div class="options">
+            <p class="login-link" onclick="window.location.href='./login.html'">Login</p>
+            <p class="forgot-password-link" onclick="showForgotPasswordForm()">Forgot Password?</p>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
