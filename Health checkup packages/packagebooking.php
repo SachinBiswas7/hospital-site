@@ -48,11 +48,6 @@ $conn->close();
 
     <h2>Health Checkup Booking</h2>
 
-    <!-- Success message -->
-    <?php if (!empty($success_message)) : ?>
-        <div class="success-message"><?php echo $success_message; ?></div>
-    <?php endif; ?>
-
     <!-- Booking form -->
     <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="booking-form">
         <label for="name">Name:</label>
@@ -78,6 +73,11 @@ $conn->close();
 
         <button type="submit" name="submit">Book Now</button>
     </form>
+
+    <!-- Success message -->
+    <?php if (!empty($success_message)) : ?>
+        <div class="success-message"><?php echo $success_message; ?></div>
+    <?php endif; ?>
 
 </body>
 </html>
