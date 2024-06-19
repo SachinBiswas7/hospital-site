@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ambulance with Live Location</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+    <link rel="stylesheet" href="ambulance.css">
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Book Ambulance with Live Location</h1>
+    <div id="map"></div>
+    <p class="error-message" id="error-message"></p>
+
+    <div class="form-container">
+        <h2>Booking Details</h2>
+        <?php
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $name = $_POST['name'];
+            $phone = $_POST['phone'];
+            $address = $_POST['address'];
+            $emergencyType = $_POST['emergencyType'];
+            $latitude = $_POST['latitude'];
+            $longitude = $_POST['longitude'];
+
+            // Database connection
+            $servername = "your_server";
+            $username = "your_username";
+            $password = "your_password";
+            $dbname = "your_database";
+
+            $conn = new mysqli($servername, $username, $password, $dbname);
+
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+
+            $sql = "INSERT INTO ambulance_bookings (name, phone, address, emergency_type, latitude, longitude)
+                    VALUES ('$name', '$phone', '$address', '$emergencyType', '$latitude', '$longitude')";
+
+            if ($conn->query($sql) === TRUE) {
+                echo "<p>New booking created successfully</p>";
+            } else {
+                echo "<p>Error: " . $sql . "<br>" . $conn->error . "</p>";
+            }
+
+            $conn->close();
+        }
+        ?>
+        <form id="ambulanceForm" method="POST" action="">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            
+            <label for="emergencyType">Emergency Type:</label>
+            <select id="emergencyType" name="emergencyType" required>
+                <option value="Accident">Accident</option>
+                <option value="Medical Emergency">Medical Emergency</option>
+                <option value="Other">Other</option>
+            </select>
+            
+            <input type="hidden" id="latitude" name="latitude">
+            <input type="hidden" id="longitude" name="longitude">
+
+            <button type="submit">Book Ambulance</button>
+        </form>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        let map = L.map('map').setView([51.505, -0.09], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        let marker = L.marker([51.505, -0.09]).addTo(map);
+
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function (position) {
+                const lat = position.coords.latitude;
+                const lng = position.coords.longitude;
+
+                const latLng = [lat, lng];
+                map.setView(latLng, 13);
+                marker.setLatLng(latLng);
+
+                document.getElementById('latitude').value = lat;
+                document.getElementById('longitude').value = lng;
+
+                reverseGeocode(lat, lng);
+            }, function () {
+                document.getElementById('error-message').textContent = "Unable to retrieve your location";
+            });
+        } else {
+            document.getElementById('error-message').textContent = "Geolocation is not supported by your browser";
+        }
+
+        map.on('click', function (e) {
+            const latLng = e.latlng;
+
+            marker.setLatLng(latLng);
+            map.setView(latLng);
+
+            document.getElementById('latitude').value = latLng.lat;
+            document.getElementById('longitude').value = latLng.lng;
+
+            reverseGeocode(latLng.lat, latLng.lng);
+        });
+
+        document.getElementById('address').addEventListener('blur', function () {
+            const address = this.value;
+            if (address) {
+                forwardGeocode(address);
+            }
+        });
+
+        function reverseGeocode(lat, lng) {
+            const url = `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lng}`;
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.display_name) {
+                        document.getElementById('address').value = data.display_name;
+                    }
+                })
+                .catch(error => console.log('Error:', error));
+        }
+
+        function forwardGeocode(address) {
+            const url = `https://nominatim.openstreetmap.org/search?format=jsonv2&q=${encodeURIComponent(address)}`;
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data && data[0]) {
+                        const latLng = [data[0].lat, data[0].lon];
+                        map.setView(latLng, 13);
+                        marker.setLatLng(latLng);
+
+                        document.getElementById('latitude').value = data[0].lat;
+                        document.getElementById('longitude').value = data[0].lon;
+                    }
+                })
+                .catch(error => console.log('Error:', error));
+        }
+    </script>
+</body>
+</html>
