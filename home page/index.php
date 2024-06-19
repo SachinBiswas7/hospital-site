@@ -23,7 +23,14 @@
             </form>
         </div>
         <div class="nav-buttons">
-            <button onclick="window.location.href='./login.php'">Login</button>
+        <?php
+            session_start();
+            if (isset($_SESSION['user'])) {
+                echo '<a href="logout.php"><button>Logout</button></a>';
+            } else {
+                echo '<a href="login.php"><button>Login</button></a>';
+            }
+            ?>
             <button onclick="window.location.href='aboutus.html'">About Us</button>
             <button onclick="window.location.href='#service'">Services</button>
             <button onclick="window.location.href='#contract'">Contact</button>
@@ -95,6 +102,10 @@
     <!-- Add more cards here -->
 </div>
 
+<div class="emergency-bar">
+    <p>Need emergency ambulance  ? <a href="ambulance.php" class="btn">Book Now 🚨</a></p>
+</div>
+
 <footer class="footer">
     <div class="container">
         <div class="footer-content">
@@ -105,6 +116,7 @@
                     <li><a href="./aboutus.html">About</a></li>
                     <li><a href="#service">Services</a></li>
                     <li><a href="#contract">Contact</a></li>
+                    
                 </ul>
             </div>
             <div class="footer-section contact-form">
