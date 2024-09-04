@@ -218,7 +218,7 @@ form.example::after {
 
 /* recomendation bar */
 .recommendation-bar {
-    background-color: #655fcc;
+    background-color: #0a064e;
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -272,6 +272,45 @@ form.example::after {
         width: calc(100% - 20px);
     }
 }
+
+/* Container for the emergency bar */
+.emergency-bar {
+    background: linear-gradient(-90deg, #ff1a1a, #fff, #ff1a1a, #fff);
+    background-size: 200% 100%;
+    animation: emergency-bar-animation 4s infinite;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+/* Keyframes for the background animation */
+@keyframes emergency-bar-animation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 0%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Style for the button */
+.emergency-bar .btn {
+    display: inline-block;
+    background-color: rgb(223, 21, 21);
+    color: black;
+    padding: 8px 15px; /* Adjusted padding */
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for the button */
+.emergency-bar .btn:hover {
+    background-color: #090909;
+    color: white;
+}
+
+
 
 /* Footer Styles */
 .footer {

@@ -18,7 +18,7 @@
         </div>
         <div class="search-form">
             <form action="search.php" method="GET">
-                <input type="text" placeholder="Search..." name="search">
+                <input type="text" placeholder="" name="search">
                 <button type="submit">Search</button>
             </form>
         </div>
