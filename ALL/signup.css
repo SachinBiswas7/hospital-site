@@ -1,0 +1,253 @@
+body {
+    margin: 0;
+padding: 0;
+font-family: 'Arial', sans-serif;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+overflow: hidden; /* Ensure overflow is hidden to prevent blurred content from leaking */
+background: url('healthhublogo.png.jpg') no-repeat center center fixed;
+background-size: contain;
+position: relative;
+}
+
+.back-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 999;
+}
+
+.back-button a {
+    display: inline-block;
+    padding: 10px;
+    background-color: #39923c;
+    color: #fbf7f7;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.back-button a:hover {
+    background-color: #1d5533;
+}
+
+.login-container {
+    position: relative;
+    background-color: rgba(166, 195, 140, 0.8);
+    padding: 50px;
+    border-radius: 8px;
+    width: 350px;
+    text-align:center;
+    margin-bottom: 150px;
+    height: 400px;
+    z-index: 1;
+}
+
+h1 {
+    color: #050505;
+    font-weight: bolder;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #38a93c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.options {
+    margin-top: 20px;
+}
+
+.signup-link,
+.forgot-password-link {
+    cursor: pointer;
+    color: #020202;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login-link {
+    cursor: pointer;
+    color: #020202;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.signup-form,
+.forgot-password-form {
+    display: none;
+}
+
+.show {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure overflow is hidden to prevent blurred content from leaking */
+    background: url('healthhublogo.png.jpg') no-repeat center center fixed;
+    background-size: contain;
+    position: relative;
+}
+
+
+.back-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 999;
+}
+
+.back-button a {
+    display: inline-block;
+    padding: 10px;
+    background-color: #39923c;
+    color: #fbf7f7;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.back-button a:hover {
+    background-color: #1d5533;
+}
+
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    filter: blur(5px); /* Adjust the blur strength as needed */
+    z-index: -1;
+}
+
+.login-container {
+    position: relative;
+    background-color: rgba(166, 195, 140, 0.8);
+    padding: 50px;
+    border-radius: 8px;
+    width: 350px;
+    text-align:center ;
+    margin-bottom: 150px;
+    height: 400px;
+    
+    z-index: 1;
+}
+
+h1 {
+    color: #050505;
+    font-weight: bolder;
+    
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #38a93c;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.options {
+    margin-top: 20px;
+}
+
+.signup-link,
+.forgot-password-link {
+    cursor: pointer;
+    color: #020202;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login-link {
+    cursor: pointer;
+    color: #020202;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.signup-form,
+.forgot-password-form {
+    display: none;
+}
+
+.show {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

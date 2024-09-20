@@ -1,0 +1,508 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+     padding: 3;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Navbar Styles */
+header {
+    background-color: #ffffff;
+    color: #0a064e;
+    padding: 1rem;
+    
+}
+
+
+/* Styles for the navigation bar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 90px; /* Adjust the width as needed */
+    height: 90px; /* Adjust the height as needed */
+    margin-right: 10px;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid rgb(229, 232, 232);
+}
+
+.search-form button {
+    padding: 10px;
+    background: #fafbfb;
+    color: #0a064e;
+    font-size: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+    font-style: italic;
+}
+
+.nav-buttons {
+    display: flex;
+}
+
+.nav-buttons button {
+    padding: 10px;
+    margin-left: 10px;
+    background: #0a064e;;
+    color: #fff;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Add any other styles as needed */
+
+
+
+li{
+    text-decoration: none;
+}
+.logo {
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: bold
+}
+* {
+    box-sizing: border-box;
+}
+
+/* Style the search field */
+form.example input[type="text"] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid rgb(46, 163, 218);
+    float: left;
+    width: 80%;
+    background: #8f4d4d;
+}
+
+/* Style the submit button */
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #2196F3;
+    color: rgb(99, 69, 204);
+    font-size: 17px;
+    border: 1px solid rgb(112, 50, 50);
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+}
+
+/* Hover effect for the button */
+form.example button:hover {
+    background: #3d8aca;
+}
+
+/* Clear floats */
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.anchor{
+    color: #0a064e;
+}
+.hospital-img{
+    width: 100%;
+    height: 50%;
+    margin-top: 1%;
+    background-size:cover;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    font-weight: lighter;
+}
+.anchor{
+    text-decoration: none;
+    font-weight: bolder;
+}
+.nav-links li {
+    margin-right: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #772020;
+}
+.highlighted-heading{
+    background-color: #5a9e2c;
+    color :rgb(46, 163, 218)
+}
+
+
+
+/* Hospital Description Styles */
+.hospital-description {
+    padding: 2rem;
+    text-align: center;
+    color: rgb(27, 164, 34);
+
+}
+
+
+
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }
+
+.box1 {
+    width: 200px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #121010;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #e8e8e9;
+    color: #0c0c0c;
+}
+
+.box1-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.boxheader {
+    /* Add styles for the h2 element with class "boxheader" */
+    font-size: 24px; /* Example font size */
+    color: #333; /* Example text color */
+    /* Add any other styles as needed */
+}
+
+.boxheader a {
+    /* Add styles for the anchor (a) element inside h2 with class "boxheader" */
+    text-decoration: none; /* Remove underline from the link */
+    color: #0c0c0c; /* Example link color */
+    /* Add any other styles for the link as needed */
+}
+
+.boxheader a:hover {
+    /* Add styles for the anchor (a) element on hover */
+    text-decoration: underline; /* Example underline on hover */
+    /* Add any other hover styles for the link as needed */
+}
+
+
+
+/* recomendation bar */
+.recommendation-bar {
+    background-color: #0a064e;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #fff;
+    color: #0a064e;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #e5e5e5;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    background-color: #ececed;
+    color: #0c0a0a;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: calc(33.33% - 20px);
+    min-width: 200px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #1f6f72;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: calc(100% - 20px);
+    }
+}
+
+/* Container for the emergency bar */
+.emergency-bar {
+    background: linear-gradient(-90deg, #ff1a1a, #fff, #ff1a1a, #fff);
+    background-size: 200% 100%;
+    animation: emergency-bar-animation 4s infinite;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+/* Keyframes for the background animation */
+@keyframes emergency-bar-animation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 0%; }
+    100% { background-position: 0% 0%; }
+}
+
+/* Style for the button */
+.emergency-bar .btn {
+    display: inline-block;
+    background-color: rgb(223, 21, 21);
+    color: black;
+    padding: 8px 15px; /* Adjusted padding */
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for the button */
+.emergency-bar .btn:hover {
+    background-color: #090909;
+    color: white;
+}
+
+
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    font-size: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #ccc;
+}
+
+.contact-form textarea {
+    height: 100px;
+}
+
+.footer-bottom {
+    background-color: #222;
+    text-align: en;
+    padding: 10px 0;
+}
+
+.contact-form-container {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-form-container h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.card-img{
+    width: 250px;
+    height: 200px;
+}
+
+.contact-form-container .text-input,
+.contact-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form-container textarea {
+    height: 100px;
+}
+
+.contact-form-container .btn {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form-container .btn:hover {
+    background-color: #e74c3c;
+}
+
+/* Style for the login modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#service {
+    overflow: hidden; /* Ensure the text is initially hidden */
+    white-space: nowrap; /* Prevent line breaks */
+    font-family: cursive; /* Use a monospaced font for a typewriter effect */
+    animation: typing 4s steps(40, end), blink-caret 0.5s step-end infinite;
+    font-weight: bold;
+    #service {
+        overflow: hidden; /* Ensure the text is initially hidden */
+        white-space: nowrap; /* Prevent line breaks */
+        font-family: monospace; /* Use a monospaced font for a typewriter effect */
+        animation: typing 4s steps(40, end), blink-caret 0.5s step-end infinite;
+        font-weight: bold;
+        border-right: 2px solid; /* Add border for the blinking cursor effect */
+      }
+      
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+      
+      @keyframes blink-caret {
+        from,
+        to {
+          border-right-color: transparent;
+        }
+        50% {
+          border-right-color: #000;
+        }
+      }
+      
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blink-caret {
+    from,
+    to {
+      border-right-color: transparent;
+    }
+    50% {
+      border-right-color: #000;
+    }
+  }
+  

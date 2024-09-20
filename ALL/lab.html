@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Website</title>
+    <link rel="stylesheet" href="labstyle.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo-container">
+            <img src="healthhublogo.png.jpg" alt="HealthHub Logo" class="logo-img">
+            <div class="logo">HealthHub</div>
+        </div>
+        <div class="search-form">
+            <input type="text" placeholder="...." name="search">
+            <button type="submit">Search</button>
+        </div>
+        <div class="nav-buttons">
+            <button onclick="window.location.href='./login.html'">Login</button>
+            <button onclick="window.location.href='aboutus.html'">About Us</button>
+            <button onclick="window.location.href='#service'">Services</button>
+            <button onclick="window.location.href='#contract'">Contact</button>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <section class="hospital-description">
+        <img class="hospital-img" src="./5.png" alt="">
+        <div id="service">Discover a holistic approach to wellness, personalized care, and a supportive community at HealthHub – because your health deserves the very best."</div>
+    </section>
+</main>
+
+<div class="box">
+    <div class="box1">
+        <img src="1.png" class="box1-img" alt="Emergency Services">
+        <h2 class="boxheader"><a href="finddoctor.html">Find a Doctor</a></h2>
+    </div>
+    <div class="box1">
+        <img src="22.png" class="box1-img" alt="Send a inquiry">
+        <h2 class="boxheader"><a href="inqurey.php">Send an inquiry</a></h2>
+    </div>
+    <div class="box1">
+        <img src="33.png" class="box1-img" alt="Book an appointment">
+        <h2 class="boxheader"><a href="doctorbooking.html">Book a Doctor</a></h2>
+    </div>
+    <div class="box1">
+        <img src="8.png" class="box1-img" alt="icu booking">
+        <h2 class="boxheader"><a href="icubooking.html">Book ICU/CCU</a></h2>
+    </div>
+</div>
+
+<div class="recommendation-bar">
+    <p>Check out our recommended packages for personalized care and exclusive benefits! <a href="package.html" class="btn">Explore Packages</a></p>
+</div>
+
+<div class="container">
+    <div class="card">
+        <img src="./OIP-removebg-preview.png" class="card-img" alt="Emergency Services">
+        <h2>Emergency Services</h2>
+        <p>24/7 emergency medical care</p>
+    </div>
+    <!-- Add more cards here -->
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./aboutus.html">About</a></li>
+                    <li><a href="#service">Services</a></li>
+                    <li><a href="#contract">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact-form">
+                <h2>Contact Us</h2>
+                <form action="lab.php" method="post" class="contact-form-container">
+                    <input type="email" name="email" class="text-input contact-input" placeholder="Your email address">
+                    <textarea name="message" class="text-input contact-input" placeholder="Your message"></textarea>
+                    <button type="submit" name="submit" class="btn btn-big">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        &copy; 2024 Hospital Name. All rights reserved.
+    </div>
+</footer>
+
+</body>
+
+</html>
