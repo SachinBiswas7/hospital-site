@@ -1,0 +1,282 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+     padding: 3;
+    background-color: rgb(255, 255, 255);
+}
+
+/* Navbar Styles */
+header {
+    background-color: #fcfefd;
+    color: #0a064e;
+    padding: 1rem;
+    
+}
+
+
+/* Styles for the navigation bar */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 90px; /* Adjust the width as needed */
+    height: 90px; /* Adjust the height as needed */
+    margin-right: 10px;
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+}
+
+.search-form input[type="text"] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid rgb(229, 232, 232);
+}
+
+.search-form button {
+    padding: 10px;
+    background: #fafbfb;
+    color: #0a064e;
+    font-size: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    cursor: pointer;
+    font-style: italic;
+}
+
+.nav-buttons {
+    display: flex;
+}
+
+.nav-buttons button {
+    padding: 10px;
+    margin-left: 10px;
+    background: #0a064e;;
+    color: #fff;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Add any other styles as needed */
+
+
+
+li{
+    text-decoration: none;
+}
+.logo {
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: bold
+}
+
+
+
+
+
+
+
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+/* Department Buttons Styles */
+.department-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    
+}
+
+.department-buttons button {
+    padding: 10px 20px;
+    border: 0.25px solid #020202;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff;
+    margin-right: 10px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.department-buttons button:hover {
+    background-color:  #3399ff;
+}
+
+/* Doctor Section Styles */
+.doctor-section {
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.doctor-section h2 {
+    margin-bottom: 40px;
+    color: #3399ff;
+    font-size: 35px;
+}
+
+/* Doctor Profiles Styles */
+.doctor-profiles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center profiles horizontally */
+    gap: 20px; /* Add space between profiles */
+}
+
+/* Doctor Profile Styles */
+.doctor-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Increase spacing between profiles */
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.doctor-profile img {
+    width: 100px;
+    height: 100px;
+    
+    margin-bottom: 10px; /* Add space between image and text */
+}
+
+.doctor-profile h3,
+.doctor-profile p {
+    margin: 0;
+
+}
+
+/* Footer Styles */
+.footer {
+    background-color:  #333;;
+    color: #faf7f7;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.footer-section p {
+    font-size: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #ccc;
+}
+
+.contact-form textarea {
+    height: 100px;
+}
+
+.footer-bottom {
+    background-color: #222;
+    text-align: en;
+    padding: 10px 0;
+}
+
+.contact-form-container {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-form-container h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.card-img{
+    width: 250px;
+    height: 200px;
+}
+
+.contact-form-container .text-input,
+.contact-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: #f6f7f8;
+    color: #0d0d0d;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.contact-form-container textarea {
+    height: 100px;
+}
+
+.contact-form-container .btn {
+    padding: 10px 20px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form-container .btn:hover {
+    background-color: #e74c3c;
+}

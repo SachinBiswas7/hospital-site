@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Doctor</title>
+  <link rel="stylesheet" href="finddoctor.css">
+</head>
+
+<body>
+
+  <header>
+    <nav>
+        <div class="logo-container">
+            <img src="healthhublogo.png.jpg" alt="HealthHub Logo" class="logo-img">
+            <div class="logo">HealthHub</div>
+        </div>
+        <!-- Add the search bar in the middle -->
+        <div class="search-form">
+          <form action="search.php" method="GET">
+              <input type="text" placeholder="Search..." name="search">
+              <button type="submit">Search</button>
+          </form>
+      </div>
+        <!-- Add the login, about us, services, and contract buttons on the right -->
+        <div class="nav-buttons">
+            
+            <button onclick="window.location.href='aboutus.html'">About Us</button>
+            <button onclick="window.location.href='#contract'">Contact</button>
+        </div>
+    </nav>
+</header>
+
+
+  <main>
+    <div class="department-buttons">
+        <div class="department-buttons">
+            <button id="surgeon" onclick="showDoctors('surgeon')">Surgeon</button>
+            <button onclick="window.location.href='#medicine'">Medicine</button>
+            <button onclick="window.location.href='#cardiologist'">Cardiologist</button>
+            <button onclick="window.location.href='#dermatologist'">Dermatologist</button>
+          </div>
+          
+    </div>
+
+    <section id="surgeon" class="doctor-section">
+      <h2>Surgeon Department</h2>
+      <div class="doctor-profiles">
+        <div class="doctor-profile">
+          <img src="doctor.jpg" alt="Surgeon 1">
+          <h3>Dr. John Doe</h3>
+          <p>Qualification: MBBS, MS (General Surgery)</p>
+        </div>
+        <div class="doctor-profile">
+          <img src="doc 2.jpg" alt="Surgeon 2">
+          <h3>Dr. Jane Smith</h3>
+          <p>Qualification: MBBS, FRCS (General Surgery)</p>
+        </div>
+        <div class="doctor-profiles">
+            <div class="doctor-profile">
+              <img src="doc 10.jpg" alt="Surgeon 1">
+              <h3>Dr. John A</h3>
+              <p>Qualification: MBBS, MS (General Surgery)</p>
+        </div>
+        <div class="doctor-profiles">
+            <div class="doctor-profile">
+              <img src="doc 3.jpg" alt="Surgeon 1">
+              <h3>Dr. John Doe</h3>
+              <p>Qualification: MBBS, MS (General Surgery)</p>
+              </div>
+    </section>
+
+
+    <section id="medicine" class="doctor-section">
+        <h2>Medicine Department</h2>
+        <div class="doctor-profiles">
+          <div class="doctor-profile">
+            <img src="doc 5.jpg" alt="Surgeon 1">
+            <h3>Dr. John B </h3>
+            <p>Qualification: MBBS, MS (General Surgery)</p>
+          </div>
+          <div class="doctor-profile">
+            <img src="doc 4.jpg" alt="Surgeon 2">
+            <h3>Dr. Jane C </h3>
+            <p>Qualification: MBBS, FRCS (General Surgery)</p>
+          </div>
+          </div>
+      </section>
+
+
+      <section id="cardiologist" class="doctor-section">
+        <h2>Cardiologist Department</h2>
+        <div class="doctor-profiles">
+          <div class="doctor-profile">
+            <img src="doc 7.jpg" alt="Surgeon 1">
+            <h3>Dr. John D </h3>
+            <p>Qualification: MBBS, MS (General Surgery)</p>
+          </div>
+          <div class="doctor-profile">
+            <img src="doc 8.jpg" alt="Surgeon 2">
+            <h3>Dr. Jane E </h3>
+            <p>Qualification: MBBS, FRCS (General Surgery)</p>
+          </div>
+          </div>
+      </section>
+
+
+      <section id="dermatologist" class="doctor-section">
+        <h2>Dermatologist Department</h2>
+        <div class="doctor-profiles">
+          <div class="doctor-profile">
+            <img src="doc 9.jpg" alt="Surgeon 1">
+            <h3>Dr. John F</h3>
+            <p>Qualification: MBBS, MS (General Surgery)</p>
+          </div>
+          <div class="doctor-profile">
+            <img src="doc 2.jpg" alt="Surgeon 2">
+            <h3>Dr. Jane I </h3>
+            <p>Qualification: MBBS, FRCS (General Surgery)</p>
+          </div>
+          </div>
+      </section>
+
+      
+    <footer class="footer">
+      <div class="container">
+          <div class="footer-content">
+            
+              <div class="footer-section links">
+                  <h2>Quick Links</h2>
+                  <ul>
+                      <li><a href="./index.php">Home</a></li>
+                      <li><a href="./aboutus.html">About</a></li>
+                      <li><a href="#contract">Contact</a></li>
+                      <li><a href="./logout.html">logout</a></li>
+                    
+                     
+                  </ul>
+              </div>
+              <div class="footer-section contact-form">
+                  <h2>Contact Us</h2>
+                  <form action="#" class="contact-form-container">
+                      <input id = "contract" type="email" name="email" class="text-input contact-input"
+                          placeholder="Your email address">
+                      <textarea name="message" class="text-input contact-input" placeholder="Your message"></textarea>
+                      <button type="submit" class="btn btn-big">Send</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+      <div class="footer-bottom">
+          &copy; 2024 Hospital Name. All rights reserved.
+      </div>
+  </footer>
+
+    </main>
+
+</body>
+
+<script src="findadoctor.js"></script>
+
+</html>
